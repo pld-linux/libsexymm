@@ -33,6 +33,8 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	enchant-devel >= 0.4.0
 Requires:	gtk+2-devel >= 2:2.4.0
+Requires:	gtkmm-devel >= 2.4.0
+Requires:	libsexy-devel >= 0.1.3
 Requires:	libxml2-devel >= 2.0
 
 %description devel
