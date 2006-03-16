@@ -1,12 +1,12 @@
 Summary:	Set of additional widgets for GTK+ (C++ bindings)
 Summary(pl):	Zestaw dodatkowych kontrolek dla GTK+ (dowi±zania C++)
 Name:		libsexymm
-Version:	0.1.3
+Version:	0.1.7
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://osiris.chipx86.com/projects/libsexy/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	f5efa414b48c204c7bac98451d5f6e99
+Source0:	http://releases.chipx86.com/libsexy/libsexymm/%{name}-%{version}.tar.gz
+# Source0-md5:	cb01af4595000d9e192f5d9fcff5b742
 URL:		http://chipx86.com/wiki/Libsexy
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	enchant-devel >= 0.4.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRequires:	iso-codes >= 0.35
-BuildRequires:	libsexy-devel >= 0.1.3
+BuildRequires:	libsexy-devel >= 0.1.7
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
@@ -34,7 +34,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	enchant-devel >= 0.4.0
 Requires:	gtk+2-devel >= 2:2.4.0
 Requires:	gtkmm-devel >= 2.4.0
-Requires:	libsexy-devel >= 0.1.3
+Requires:	libsexy-devel >= 0.1.7
 Requires:	libxml2-devel >= 2.0
 
 %description devel
@@ -64,7 +64,8 @@ Statyczna biblioteka libsexymm.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	 --with-html-dir=%{_gtkdocdir}
 %{__make}
 
 %install
@@ -88,6 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_libdir}/libsexymm
 %{_includedir}/libsexymm
 %{_pkgconfigdir}/*.pc
 
