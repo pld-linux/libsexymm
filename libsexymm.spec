@@ -1,22 +1,18 @@
 Summary:	Set of additional widgets for GTK+ (C++ bindings)
 Summary(pl):	Zestaw dodatkowych kontrolek dla GTK+ (dowi±zania C++)
 Name:		libsexymm
-Version:	0.1.7
+Version:	0.1.9
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.chipx86.com/libsexy/libsexymm/%{name}-%{version}.tar.gz
-# Source0-md5:	cb01af4595000d9e192f5d9fcff5b742
+# Source0-md5:	77c8ae69084e478a6b090ec6e5ae26bf
 URL:		http://chipx86.com/wiki/Libsexy
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	enchant-devel >= 0.4.0
-BuildRequires:	gtkmm-devel >= 2.4.0
-BuildRequires:	gtk+2-devel >= 2:2.4.0
-BuildRequires:	iso-codes >= 0.35
-BuildRequires:	libsexy-devel >= 0.1.7
+BuildRequires:	gtkmm-devel >= 2.10.1
+BuildRequires:	libsexy-devel >= 0.1.9
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,11 +27,8 @@ Summary:	Header files for libsexymm library
 Summary(pl):	Pliki nag³ówkowe biblioteki libsexymm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	enchant-devel >= 0.4.0
-Requires:	gtk+2-devel >= 2:2.4.0
-Requires:	gtkmm-devel >= 2.4.0
-Requires:	libsexy-devel >= 0.1.7
-Requires:	libxml2-devel >= 2.0
+Requires:	gtkmm-devel >= 2.10.1
+Requires:	libsexy-devel >= 0.1.9
 
 %description devel
 Header files for libsexymm library.
@@ -64,8 +57,7 @@ Statyczna biblioteka libsexymm.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	 --with-html-dir=%{_gtkdocdir}
+%configure
 %{__make}
 
 %install
