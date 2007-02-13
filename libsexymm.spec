@@ -1,5 +1,5 @@
 Summary:	Set of additional widgets for GTK+ (C++ bindings)
-Summary(pl.UTF-8):   Zestaw dodatkowych kontrolek dla GTK+ (dowiązania C++)
+Summary(pl.UTF-8):	Zestaw dodatkowych kontrolek dla GTK+ (dowiązania C++)
 Name:		libsexymm
 Version:	0.1.9
 Release:	1
@@ -24,7 +24,7 @@ Zestaw kontrolek graficznych dla programów opartych o GTK+.
 
 %package devel
 Summary:	Header files for libsexymm library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libsexymm
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libsexymm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.10.1
@@ -38,7 +38,7 @@ Pliki nagłówkowe biblioteki libsexymm.
 
 %package static
 Summary:	Static libsexymm library
-Summary(pl.UTF-8):   Statyczna biblioteka libsexymm
+Summary(pl.UTF-8):	Statyczna biblioteka libsexymm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
