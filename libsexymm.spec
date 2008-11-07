@@ -2,7 +2,7 @@ Summary:	Set of additional widgets for GTK+ (C++ bindings)
 Summary(pl.UTF-8):	Zestaw dodatkowych kontrolek dla GTK+ (dowiązania C++)
 Name:		libsexymm
 Version:	0.1.9
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.chipx86.com/libsexy/libsexymm/%{name}-%{version}.tar.gz
