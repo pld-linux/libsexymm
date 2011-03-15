@@ -2,7 +2,7 @@ Summary:	Set of additional widgets for GTK+ (C++ bindings)
 Summary(pl.UTF-8):	Zestaw dodatkowych kontrolek dla GTK+ (dowiązania C++)
 Name:		libsexymm
 Version:	0.1.9
-Release:	5
+Release:	6
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.chipx86.com/libsexy/libsexymm/%{name}-%{version}.tar.gz
@@ -68,6 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/lib*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -77,16 +79,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libsexymm.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsexymm.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libsexymm.so
 %{_libdir}/libsexymm
 %{_includedir}/libsexymm
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libsexymm.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libsexymm.a
